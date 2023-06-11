@@ -1,0 +1,45 @@
+@import "../assets/variables";
+
+.header {
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .header {
+    .nav-links {
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+
+    .header-title {
+      display: grid;
+      place-content: center;
+    }
+  }
+}

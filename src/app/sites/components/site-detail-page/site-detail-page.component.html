@@ -1,0 +1,42 @@
+<div *ngIf="site$ | async as site">
+  <div class="site-card">
+    <div class="card-header">
+      <img *ngIf="site.logo" [src]="site.logo" class="card-logo" />
+      <h2 class="card-title">{{ site.name }}</h2>
+    </div>
+
+    <p class="card-info">
+      {{ site.location.city }}, {{ site.location.address }}
+    </p>
+
+    <img
+      *ngFor="let picture of site.pictures"
+      [src]="picture"
+      class="card-picture"
+    />
+  </div>
+
+  <div>
+    <h3>Rooms</h3>
+  </div>
+
+  <div class="room-list">
+    <div *ngFor="let room of site.rooms" class="room-card">
+      <div class="room-card-header">
+        <b class="room-card-title">
+          <a [routerLink]="['/sites', site.id, 'rooms', room.id]">{{
+            room.name
+          }}</a>
+        </b>
+      </div>
+
+      <p class="room-card-info">Price per hour - {{ room.pricePerHour }}$</p>
+
+      <img
+        *ngFor="let picture of room.pictures"
+        [src]="picture"
+        class="room-card-picture"
+      />
+    </div>
+  </div>
+</div>
