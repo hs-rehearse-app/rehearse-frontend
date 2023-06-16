@@ -1,0 +1,33 @@
+.room {
+  &-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.07);
+    padding: 20px;
+  }
+
+  &-card-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &-card-logo {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &-card-title {
+    font-size: 1.1em;
+  }
+
+  &-card-info {
+    margin: 0.5em 0;
+  }
+
+  &-card-picture {
+    width: 70px;
+    object-fit: cover;
+  }
+}

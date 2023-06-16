@@ -27,6 +27,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: $primary;
+}
+
 img {
   object-fit: cover;
 }

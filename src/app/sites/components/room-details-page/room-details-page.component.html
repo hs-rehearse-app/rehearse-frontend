@@ -1,0 +1,15 @@
+<div class="room-card" *ngIf="room$ | async as room">
+  <div class="room-card-header">
+    <b class="room-card-title">
+      {{ room.name }}
+    </b>
+  </div>
+
+  <p class="room-card-info">Price per hour - {{ room.pricePerHour }}$</p>
+
+  <img
+    *ngFor="let picture of room.pictures"
+    [src]="picture"
+    class="room-card-picture"
+  />
+</div>
